@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad Educativa Fiscal Los Shyris</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --azul:#0a2a66;
+    --azul-claro:#123a8c;
+    --dorado:#d4af37;
+    --blanco:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,var(--azul),var(--azul-claro));
+    color:var(--blanco);
+    overflow-x:hidden;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header img{
+    width:120px;
+    margin-bottom:15px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);} 
+    50%{transform:translateY(-10px);} 
+}
+
+header h1{
+    font-size:2.2rem;
+    color:var(--dorado);
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    border-radius:25px;
+    padding:30px;
+    margin-bottom:30px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+h2{
+    color:var(--dorado);
+    margin-bottom:20px;
+    text-align:center;
+}
+
+audio{
+    width:100%;
+}
+
+.lyrics-container{
+    height:350px;
+    overflow-y:auto;
+    scroll-behavior:smooth;
+    padding:20px;
+    text-align:center;
+}
+
+.line{
+    font-size:1.2rem;
+    margin:15px 0;
+    opacity:0.3;
+    transition:0.4s;
+}
+
+.active{
+    opacity:1;
+    font-size:1.35rem;
+    font-weight:700;
+    color:#d4af37; /* dorado más suave */
+    text-shadow:0 0 10px rgba(212,175,55,0.4);
+    transform:scale(1.03);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+    font-size:0.9rem;
+}
+
+@media(max-width:600px){
+    .lyrics-container{
+        height:250px;
+    }
+}
+
+.instrumental{
+    opacity:0.7;
+    font-style:italic;
+    letter-spacing:2px;
+    color:#ffffff;
+}
+
+.instrumental.active{
+    color:#00e5ff;
+    text-shadow:0 0 20px #00e5ff;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Escudo Unidad Educativa Fiscal Los Shyris">
+    <h1>Unidad Educativa Fiscal Los Shyris</h1>
+    <p>Quito - Ecuador</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>🎵 Himno Institucional</h2>
+<audio id="audio" controls>
+<source src="himno.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="card">
+<h2>📜 Letra Sincronizada</h2>
+<div class="lyrics-container" id="lyrics">
+
+<p class="line" data-time="13.5">Carán Shyri libera ataduras</p>
+<p class="line" data-time="19">Ilumina mi mundo interior</p>
+<p class="line" data-time="23">Basta duelo y sombreros obscuros</p>
+<p class="line" data-time="27">Que mañana sea un día mejor.</p>
+<p class="line" data-time="31">Basta duelo y sombreros obscuros</p>
+<p class="line" data-time="35">Que mañana sea un día mejor.</p>
+
+<p class="line instrumental" data-time="39">🎶 Instrumental 🎶</p>
+
+<p class="line" data-time="54">De Los Shyris, juventud de esperanza</p>
+<p class="line" data-time="59">Es presencia tu canto de amor</p>
+<p class="line" data-time="63">Con bengalas y alegrías del alma</p>
+<p class="line" data-time="68">Cumpliremos tu sueño inmortal.</p>
+
+<p class="line" data-time="71">En las cumbres plateadas de tu imperio</p>
+<p class="line" data-time="76">El cóndor centinela vio forjar</p>
+<p class="line" data-time="80">El trabajo fecundo de sus hijos</p>
+<p class="line" data-time="85">Y la historia de su libertad.</p>
+<p class="line" data-time="89">El trabajo fecundo de sus hijos</p>
+<p class="line" data-time="93">Y la historia de su libertad.</p>
+
+<p class="line instrumental" data-time="97">🎶 Instrumental 🎶</p>
+
+<p class="line" data-time="102">De Los Shyris, juventud de esperanza</p>
+<p class="line" data-time="106">Fundaremos un siglo de honor</p>
+<p class="line" data-time="110">Que la Patria ha soñado una alianza</p>
+<p class="line" data-time="114">Por la gloria de nuestro Ecuador.</p>
+<p class="line" data-time="119">Que la Patria ha soñado una alianza</p>
+<p class="line" data-time="122">Por la gloria de nuestro Ecuador.</p>
+
+<p class="line" data-time="128">Juventud, juventud</p>
+</div>
+</div>
+
+<div class="card">
+<h2>🏫 Información Institucional</h2>
+<p><strong>Misión:</strong> Brindar educación integral basada en valores y excelencia académica.</p><br>
+<p><strong>Visión:</strong> Ser una institución líder en calidad educativa en el Ecuador.</p><br>
+<p><strong>Valores:</strong> Respeto, Responsabilidad, Honestidad, Solidaridad y Disciplina.</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Unidad Educativa Fiscal Los Shyris - Quito, Ecuador
+</footer>
+
+<script>
+const audio = document.getElementById("audio");
+const lines = document.querySelectorAll(".line");
+const lyricsContainer = document.getElementById("lyrics");
+
+let markIndex = 0; // para marcar versos automáticamente
+let markedTimes = [];
+
+function setActiveLine(){
+    let currentTime = audio.currentTime;
+
+    lines.forEach((line, index) => {
+        const startTime = parseFloat(line.getAttribute("data-time"));
+        const nextLine = lines[index + 1];
+        const endTime = nextLine ? parseFloat(nextLine.getAttribute("data-time")) : audio.duration;
+
+        if(currentTime >= startTime && currentTime < endTime){
+            lines.forEach(l => l.classList.remove("active"));
+            line.classList.add("active");
+            line.scrollIntoView({behavior:"smooth", block:"center"});
+        }
+    });
+}
+
+audio.addEventListener("timeupdate", setActiveLine);
+
+
+</script>
+
+</body>
+</html>
